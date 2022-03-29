@@ -5,29 +5,29 @@ import java.util.Arrays;
 public class Joystick {
 	public static int solution(String name) {
         int answer = 0;
-        // ¿À¸¥ÂÊÀ¸·Î Âß °¡´Â °æ¿ì
+        // ì˜¤ë¥¸ìª½ìœ¼ë¡œ ì­‰ ê°€ëŠ” ê²½ìš°
         int cost = name.length() - 1;
         
         for(int i=0; i<name.length(); i++) {
         	
-        	// Á¶ÀÌ½ºÆ½ »óÇÏ ¿òÁ÷ÀÓ ÆÇ´Ü
+        	// ì¡°ì´ìŠ¤í‹± ìƒí•˜ ì›€ì§ì„ íŒë‹¨
         	if(name.charAt(i) > 'M') {
         		answer += 'Z' - name.charAt(i) + 1;
         	}else {
         		answer += name.charAt(i) - 'A';
         	}
         	
-        	// Á¶ÀÌ½ºÆ½ ÁÂ¿ì ¿òÁ÷ÀÓ ÆÇ´Ü
+        	// ì¡°ì´ìŠ¤í‹± ì¢Œìš° ì›€ì§ì„ íŒë‹¨
         	int nextIdx = i + 1;
         	
-        	// ¿¬¼ÓµÈ A °¡ ³¡³­ ÀÎµ¦½º°¡ ´ÙÀ½ ÀÎµ¦½º
+        	// ì—°ì†ëœ A ê°€ ëë‚œ ì¸ë±ìŠ¤ê°€ ë‹¤ìŒ ì¸ë±ìŠ¤
         	while(nextIdx < name.length() && name.charAt(nextIdx) == 'A') {
         		nextIdx++;
         	}
         	
-        	// ¿À¸¥ÂÊÀ¸·Î Âß °¡´Â °æ¿ì¿Í °¬´Ù°¡ ¿ŞÂÊÀ¸·Î µ¹¾Æ°¡´Â È½¼ö ºñ±³
+        	// ì˜¤ë¥¸ìª½ìœ¼ë¡œ ì­‰ ê°€ëŠ” ê²½ìš°ì™€ ê°”ë‹¤ê°€ ì™¼ìª½ìœ¼ë¡œ ëŒì•„ê°€ëŠ” íšŸìˆ˜ ë¹„êµ
         	cost = Math.min(cost, i * 2 + name.length() - nextIdx);
-        	// À§ ºñ±³ °á°ú°ª°ú Ã³À½ºÎÅÍ µÚ·Î °¬´Ù°¡ µ¹¾Æ¿À´Â °æ¿ì¿Í ºñ±³
+        	// ìœ„ ë¹„êµ ê²°ê³¼ê°’ê³¼ ì²˜ìŒë¶€í„° ë’¤ë¡œ ê°”ë‹¤ê°€ ëŒì•„ì˜¤ëŠ” ê²½ìš°ì™€ ë¹„êµ
         	cost = Math.min(cost, (name.length() - nextIdx) * 2 + i);
         	
         }

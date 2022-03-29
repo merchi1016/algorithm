@@ -12,14 +12,14 @@ public class BigNumber {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// N, M, K °ø¹é ±âÁØÀ¸·Î ±¸ºĞÇÏ¿© ÀÔ·Â ¹Ş±â
+		// N, M, K ê³µë°± ê¸°ì¤€ìœ¼ë¡œ êµ¬ë¶„í•˜ì—¬ ì…ë ¥ ë°›ê¸°
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 		int k = sc.nextInt();
 		
 		int data[] = new int[n];
 		
-		// µÎ¹øÂ° ÁÙ ¸ğµç µ¥ÀÌÅÍ ÀÔ·Â¹Ş±â
+		// ë‘ë²ˆì§¸ ì¤„ ëª¨ë“  ë°ì´í„° ì…ë ¥ë°›ê¸°
 		for(int i=0;i<n;i++) {
 			data[i] = sc.nextInt();
 		}

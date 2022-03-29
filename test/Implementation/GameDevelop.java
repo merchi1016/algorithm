@@ -6,7 +6,7 @@ public class GameDevelop {
 	
 	public static int n, m, pX, pY, pD;
 	
-	// ¿ŞÂÊÀ¸·Î È¸Àü
+	// ì™¼ìª½ìœ¼ë¡œ íšŒì „
 	public static void turn_left() {
 		pD -= 1;
 		if(pD == -1)
@@ -15,22 +15,22 @@ public class GameDevelop {
 	
 	public static void solution() {
 		Scanner sc = new Scanner(System.in);
-		// ¸Ê Å©±â
+		// ë§µ í¬ê¸°
 		n = sc.nextInt();
 		m = sc.nextInt();
-		// ÇÃ·¹ÀÌ¾î À§Ä¡, º¸°íÀÖ´Â ¹æÇâ
+		// í”Œë ˆì´ì–´ ìœ„ì¹˜, ë³´ê³  ìˆëŠ” ë°©í–¥
 		pX = sc.nextInt();
 		pY = sc.nextInt();
 		pD = sc.nextInt();
-		// ¸Ê
+		// ë§µ
 		int[][] map = new int[n][m];
-		// ÀÌµ¿ÇÑ °÷À» Ã¼Å©ÇÏ´Â ¸Ê
+		// ì´ë™í•œ ê³³ì„ ì²´í¬í•˜ëŠ” ë§µ
 		int[][] chMap = new int[n][m];
-		// ºÏ, µ¿, ³², ¼­ ¹æÇâ Á¤ÀÇ
+		// ë¶, ë™, ë‚¨, ì„œ ë°©í–¥ ì •ì˜
 		int[] dx = {-1,0,1,0};
 		int[] dy = {0,1,0,-1};
 		
-		// ¸Ê ±¸¼º
+		// ë§µ êµ¬ì„±
 		for(int i=0;i<n;i++) {
 			for(int j=0;j<m;j++) {
 				map[i][j] = sc.nextInt();
@@ -38,18 +38,18 @@ public class GameDevelop {
 		}
 		
 		
-		// °¡º» ¶¥ÀÇ ¼ö Ä«¿îÆ®.
-		// ÇÃ·¹ÀÌ¾î°¡ ¿ø·¡ ÀÖ´Â °÷µµ ¹æ¹®ÇÑ °÷ÀÌ¹Ç·Î 1·Î ÃÊ±âÈ­
+		// ê°€ë³¸ ë•…ì˜ ìˆ˜ ì¹´ìš´íŠ¸
+		// í”Œë ˆì´ì–´ê°€ ì›ë˜ ìˆëŠ” ê³³ë„ ë°©ë¬¸í•œ ê³³ì´ë¯€ë¡œ 1ë¡œ ì´ˆê¸°í™”
 		int cnt = 1;
-		// È¸ÀüÇÑ ¼ö
+		// íšŒì „í•œ ìˆ˜
 		int turn_time = 0;
 		while(true) {
-			// ¿ŞÂÊÀ¸·Î È¸Àü
+			// ì™¼ìª½ìœ¼ë¡œ íšŒì „
 			turn_left();
 			int nx = pX + dx[pD];
 			int ny = pY + dy[pD];
 			
-			// È¸ÀüÇÑ ÀÌÈÄ Á¤¸é¿¡ °¡º¸Áö ¾ÊÀº Ä­ÀÌ Á¸ÀçÇÏ´Â °æ¿ì ÀÌµ¿
+			// íšŒì „í•œ ì´í›„ ì •ë©´ì— ê°€ë³´ì§€ ì•Šì€ ì¹¸ì´ ì¡´ì¬í•˜ëŠ” ê²½ìš° ì´ë™
 			if(chMap[nx][ny] == 0 && map[nx][ny] == 0) {
 				chMap[nx][ny] = 1;
 				pX = nx;
@@ -57,19 +57,19 @@ public class GameDevelop {
 				cnt += 1;
 				turn_time = 0;
 				continue;
-			}else{ // È¸ÀüÇÑ ÀÌÈÄ ¸ğµÎ °¡º»Ä­ÀÌ°Å³ª ¹Ù´ÙÀÎ °æ¿ì
+			}else{ // íšŒì „í•œ ì´í›„ ëª¨ë‘ ê°€ë³¸ì¹¸ì´ê±°ë‚˜ ë°”ë‹¤ì¸ ê²½ìš°
 				turn_time += 1;
 			}
 			
-			// ³× ¹æÇâ °¥ ¼ö ¾ø´Â °æ¿ì
+			// ë„¤ ë°©í–¥ ê°ˆ ìˆ˜ ì—†ëŠ” ê²½ìš°
 			if(turn_time == 4) {
 				nx = pX - dx[pD];
 				ny = pY - dy[pD];
-				// µÚ·Î ÀÌµ¿°¡´ÉÇÏ¸é ÀÌµ¿ÇÏ±â
+				// ë’¤ë¡œ ì´ë™ê°€ëŠ¥í•˜ë©´ ì´ë™í•˜ê¸°
 				if(chMap[nx][ny] == 0) {
 					pX = nx;
 					pY = ny;
-				}else { // µÚ°¡ ¹Ù´Ù·Î ¸·Çô ÀÖ´Â °æ¿ì
+				}else { // ë’¤ë¡œ ë°”ë‹¤ë¡œ ë§‰í˜€ ìˆëŠ” ê²½ìš°
 					break;
 				}
 				

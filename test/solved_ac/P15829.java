@@ -1,7 +1,7 @@
 package solved_ac;
 
 import java.util.Scanner;
-// hashing ¹®Á¦
+// hashing ë¬¸ì œ
 
 public class P15829 {
 	public static void solution() {

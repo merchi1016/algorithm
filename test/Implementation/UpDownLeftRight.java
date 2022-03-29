@@ -7,11 +7,11 @@ public class UpDownLeftRight {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
-		sc.nextLine(); // ¹öÆÛ ºñ¿ì±â
+		sc.nextLine(); // ë²„í¼ ë¹„ìš°ê¸°
 		String direction = sc.nextLine();
 		String[] split_dir = direction.split(" ");
 		
-		// pos[0] : xÁÂÇ¥ , pos[1] : yÁÂÇ¥
+		// pos[0] : xì¢Œí‘œ , pos[1] : yì¢Œí‘œ
 		int[] pos = new int[2];
 		pos[0] = 1;
 		pos[1] = 1;
@@ -37,7 +37,7 @@ public class UpDownLeftRight {
 			}
 		}
 		
-		// ÇàÀº y ÁÂÇ¥, ¿­Àº x ÁÂÇ¥
+		// í–‰ì€ y ì¢Œí‘œ, ì—´ì€ x ì¢Œí‘œ
 		System.out.println(pos[1] + " " + pos[0]);
 	}
 }

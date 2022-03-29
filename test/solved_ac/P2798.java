@@ -3,7 +3,7 @@ package solved_ac;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// ºí·¢Àè ¹®Á¦
+// ë¸”ëž™ìž­ ë¬¸ì œ
 public class P2798 {
 	public static void solution() {
 		Scanner sc = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package solved_ac;
 
-// ¹úÁý ¹®Á¦
+// ë²Œì§‘ ë¬¸ì œ
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,9 +13,9 @@ public class P2292 {
 		
 		int N = Integer.parseInt(br.readLine());
 		
-		// °ã ¼ö
+		// ê±°ì¹˜ëŠ” ë²Œì§‘ ì¹´ìš´íŠ¸ ìˆ˜
 		int count = 1;
-		// ¹üÀ§
+		// ë²”ìœ„
 		int range = 2;
 		
 		if(N == 1) {

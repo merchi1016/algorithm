@@ -6,23 +6,23 @@ public class KingdomKnight {
 	public static void solution() {
 		Scanner sc = new Scanner(System.in);
 		
-		// À§Ä¡ ÀÔ·Â¹Ş±â
+		// ìœ„ì¹˜ ì…ë ¥ë°›ê¸°
 		String pos = sc.next();
 		int row = pos.charAt(1) - '0';
 		int column = pos.charAt(0) - 'a' + 1;
 		
-		// ÀÌµ¿ÇÒ ¼ö ÀÖ´Â 8°¡Áö ¹æÇâ Á¤ÀÇ
+		// ì´ë™í•  ìˆ˜ ìˆëŠ” 8ê°€ì§€ ë°©í–¥ ì •ì˜
 		int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
 		int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
 		
-		// 8°¡Áö ¹æÇâ À§Ä¡ ÀÌµ¿ °¡´ÉÇÑÁö È®ÀÎ
+		// 8ê°€ì§€ ë°©í–¥ ìœ„ì¹˜ ì´ë™ ê°€ëŠ¥í•œì§€ í™•ì¸
 		int result = 0;
 		for(int i = 0; i < 8; i++) {
-			// ÀÌµ¿ÇÏ°íÀÚ ÇÏ´Â À§Ä¡ È®ÀÎ
+			// ì´ë™í•˜ê³ ì í•˜ëŠ” ìœ„ì¹˜ í™•ì¸
 			int nextRow = row + dx[i];
 			int nextCol = column + dy[i];
 			
-			// ÇØ´ç À§Ä¡·Î ÀÌµ¿ °¡´ÉÇÏ¸é Ä«¿îÆ® Áõ°¡
+			// í•´ë‹¹ ìœ„ì¹˜ë¡œ ì´ë™ ê°€ëŠ¥í•˜ë©´ ì¹´ìš´íŠ¸ ì¦ê°€
 			if(nextRow >= 1 && nextRow <=8 &&
 					nextCol >= 1 && nextCol <= 8) {
 				result += 1;

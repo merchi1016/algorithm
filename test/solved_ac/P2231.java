@@ -1,6 +1,6 @@
 package solved_ac;
 
-// ºÐÇØÇÕ ¹®Á¦
+// ë¶„í•´í•© ë¬¸ì œ
 
 import java.io.BufferedReader;
 import java.io.IOException;
