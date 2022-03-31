@@ -1,12 +1,10 @@
 package solved_ac;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
-
-public class Main{
-	public static void main(String[] args) throws IOException{
+// 설탕 배달
+// https://www.acmicpc.net/problem/2839
+public class P2839 {
+	public static void solution() {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		// 나누고 난 후 중간 과정 저장
@@ -34,7 +32,5 @@ public class Main{
 			result += tmp / 3;
 			System.out.println(result);
 		}
-
 	}
-	
 }
