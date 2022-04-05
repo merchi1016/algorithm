@@ -9,39 +9,37 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main{
-	public static void main(String[] args)throws IOException{
-		solution();
+	static int max_measure = 1;
+	static int min_multiple = 1;
+	
+	public static void main(String[] args){
+		P2609.solution2();
 	}
 	
 	public static void solution() {
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		String[] data = new String[num];
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
-		sc.nextLine();
+		getResult(a, b);
 		
-		for(int i=0;i<num;i++) {
-			data[i] = sc.nextLine();
-		}
+		System.out.println(max_measure);
+		System.out.println(min_multiple);
+	}
+	
+	public static void getResult(int a, int b) {
+		int tmp_a = a;
+		int tmp_b = b;
 		
-		Arrays.sort(data, new Comparator<String>() {
-			public int compare(String s1, String s2) {
-				if(s1.length() == s2.length())
-					return s1.compareTo(s2);
-				else
-					return s1.length() - s2.length();
-			}
-		});
-		
-		System.out.println(data[0]);
-		
-		for(int i=1;i<num;i++) {
-			if(!data[i].equals(data[i-1])) {
-				System.out.println(data[i]);
+		while(true) {
+			for(int i=1;i<10000;i++) {
+				if(tmp_a % i == 0 && tmp_b % i == 0) {
+					tmp_a /= i;
+					tmp_b /= i;
+					max_measure *= i;
+					break;
+				}
 			}
 		}
 	}
-	
-	
-	
 }
