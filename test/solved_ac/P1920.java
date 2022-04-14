@@ -1,18 +1,16 @@
 package solved_ac;
 
+// 수 찾기
+// https://www.acmicpc.net/problem/1920
+// 22.04.14 못품. 이진탐색을 구현했긴 했으나 이상해서 블로그보고 다시 수정함
+// https://st-lab.tistory.com/261 참조
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.IOException;
 import java.util.StringTokenizer;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Scanner;
 
-public class Main{
-	public static void main(String[] args) throws IOException{
-		solution();
-	}
-	
+public class P1920 {
 	public static void solution() throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
