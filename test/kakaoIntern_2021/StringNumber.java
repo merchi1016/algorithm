@@ -1,4 +1,4 @@
-package kakooIntern_2021;
+package kakaoIntern_2021;
 
 // 숫자 문자열과 영단어
 // https://programmers.co.kr/learn/courses/30/lessons/81301

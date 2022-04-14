@@ -1,4 +1,4 @@
-package kakooIntern_2021;
+package kakaoIntern_2021;
 
 public class Main {
 
