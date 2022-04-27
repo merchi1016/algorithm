@@ -1,4 +1,4 @@
-package dfs_bfs;
+package graph;
 
 import java.util.ArrayList;
 
